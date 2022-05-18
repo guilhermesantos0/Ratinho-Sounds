@@ -9,7 +9,11 @@ function playAudio(fileName){
 }
 
 let slider = document.getElementById("volume")
+let label = document.getElementById("volumeLabel")
 
 slider.oninput = function(){
-    audioVolume = this.value / 10
+    let labelVolume = this.value
+    audioVolume = labelVolume / 100
+
+    label.innerHTML = `<i class="fa-solid fa-volume-high"></i> Volume: <vl>${labelVolume}</vl>%`
 }

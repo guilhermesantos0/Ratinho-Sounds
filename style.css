@@ -89,6 +89,10 @@ body{
     border-radius: 50%;
 }
 
+vl {
+    color: rgb(13, 79, 105);
+}
+
 @media (max-width: 1280px) {
     body{
         background-size: contain;
