@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Blinker', sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("./background.jpg");
+    background-size: cover;
+}
+
+#container{
+    margin-top: 20vh;
+    width: 80vh;
+    background: linear-gradient(75deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.205) 50%);
+    border-radius: 10px;
+}
+
+#buttons{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1vh;
+    list-style: none;
+    padding: 10vh;
+    padding-bottom: 5vh; 
+}
+
+#buttons .button button{
+    width: 20vh;
+    height: 5vh;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, rgb(13, 96, 129) 0%, rgb(17, 146, 146) 50%);
+    color: aliceblue;
+    border: none;
+    border-radius: 10px;
+    transition: .7s;
+    font-size: larger;
+}
+
+#buttons .button button:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 10px rgb(50, 53, 54);
+}
+
+#buttons .button button:active{
+    transition: .3s;
+    transform: translateY(5px) translateX(2px);
+}
+
+#audioVolume{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+#volume{
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 40%;
+    height: 3vh;
+    background: rgba(36, 36, 36, 0.671); 
+    outline: none;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: 12px;
+}
+
+#audioVolume #volume::-webkit-slider-thumb{
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 3vh; 
+    height: 3vh;
+    background: rgb(20, 125, 167);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+@media (max-width: 1280px) {
+    body{
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-size: 100vw 100vh;
+    }
+}
