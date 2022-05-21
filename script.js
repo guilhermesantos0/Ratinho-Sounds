@@ -15,5 +15,10 @@ slider.oninput = function(){
     let labelVolume = this.value
     audioVolume = labelVolume / 100
 
-    label.innerHTML = `<i class="fa-solid fa-volume-high"></i> Volume: <vl>${labelVolume}</vl>%`
+    let labelValue = ""
+    if(labelVolume > 50) labelValue = `<i class="fa-solid fa-volume-high"></i> Volume: <vl>${labelVolume}</vl>%`
+    else if(labelVolume > 0) labelValue = `<i class="fa-solid fa-volume-low"></i> Volume: <vl>${labelVolume}</vl>%`
+    else labelValue = `<i class="fa-solid fa-volume-xmark"></i> Volume: <vl>${labelVolume}</vl>%`
+
+    label.innerHTML = labelValue 
 }
